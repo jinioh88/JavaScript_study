@@ -1,9 +1,12 @@
-var str = 'test';
-console.log(str[0]);
+var p = function Person(name) {
+    this.name = name;
+}
 
-str[0] = 'T';
-console.log(str);
+p.sayHi = function () {
+    return 'Hi my name is $(this.name)';
+}
 
-var nullVar = null;
-console.log(typeof nullVar);
-console.log(nullVar === null);d            
+const me = p('OH');
+
+console.log(me.sayHi());
+console.log(p.sayHi());
