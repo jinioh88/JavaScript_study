@@ -6,7 +6,5 @@ p.sayHi = function () {
     return 'Hi my name is $(this.name)';
 }
 
-const me = p('OH');
-
-console.log(me.sayHi());
-console.log(p.sayHi());
+const me = new p('oh');
+console.log(me.constructor.sayHi());
