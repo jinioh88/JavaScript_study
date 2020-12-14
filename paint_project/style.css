@@ -46,7 +46,7 @@ body {
 }
 
 .controls__btns button:active {
-  transform: sclae(0.98);
+  transform: scale(0.98);
 }
 
 .controls .controls__colors {
@@ -62,5 +62,5 @@ body {
 }
 
 .controls .controls__range {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
