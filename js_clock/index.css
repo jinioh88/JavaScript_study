@@ -1,5 +1,8 @@
 body {
   background-color: #96b7d7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
@@ -16,6 +19,11 @@ h1 {
 .form,
 .greetings {
   display: none;
+}
+
+.todoform {
+  text-align: center;
+  background-color: black;
 }
 
 .showing {

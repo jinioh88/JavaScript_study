@@ -1,12 +1,14 @@
-var value = "val1";
-
-function frintValue() {
-    return value;
+function Person(name) {
+    this.name = name;
 }
 
-function printFunc(func) {
-    var value = "val2";
-    console.log(func());
-}
+var foo = new Person('foo');
 
-printFunc(frintValue);
+Person.prototype.name = 'person2';
+
+Person.prototype.getName = function () {
+    return this.name;
+}
+console.dir(Person);
+console.log(foo.getName());
+console.log(foo.__proto__.getName());
