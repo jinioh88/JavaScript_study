@@ -34,6 +34,13 @@ h4 {
   text-align: center;
 }
 
+.weather {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
