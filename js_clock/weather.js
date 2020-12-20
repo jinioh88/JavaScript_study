@@ -1,4 +1,4 @@
-const API_KEY = 'ce630cebc630a9c49a15f7136d255580';
+const API_KEY = 'input your api key';
 const COORDS = 'coords';
 
 const weather = document.querySelector('.js-weather');
@@ -23,8 +23,6 @@ function saveCoords(coordsObj) {
 }
 
 function handleGeoSuccess(position) {
-    console.dir(position);
-
     const lat = position.coords.latitude;
     const lng = position.coords.longitude;
     const coordsObj = {
