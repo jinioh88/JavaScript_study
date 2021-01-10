@@ -35,8 +35,11 @@ var len2 = str?.length; // 0
 var foo = '' || 'default string'; // ''
 var foo2 = '' ?? 'default string'; // default string
 
-var person = {
-    firstName: 'OH'
+const person = {
+    firstName: 'OH',
+    sayHi() {
+        console.log('hi' + this.firstName);
+    }
 };
 
 person.age = 30;
@@ -48,11 +51,11 @@ var key = 'hello';
 obj[key] = 'world'; // es5 방식
 var obj = { [key]: 'world' }; // es6 방식
 
-// ES5
-var obj = {
-    x: x,
-    y: y
-};
+const prefix = 'prop';
+let i = 0;
 
-// ES6 
-var obj = { x, y }
+const obj = {
+    [`${prefix}-${++i}`]: i,
+    [`${prefix}-${++i}`]: i,
+    [`${prefix}-${++i}`]: i
+};
