@@ -10,3 +10,12 @@ var str = 'string';
 str[0] = 'S';
 console.log(str);
 
+var person1 = {
+    name: 'OH'
+};
+
+var person2 = {
+    name: 'OH'
+};
+
+console.log(person1 === person2);
