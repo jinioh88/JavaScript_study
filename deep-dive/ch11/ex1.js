@@ -17,5 +17,3 @@ var person1 = {
 var person2 = {
     name: 'OH'
 };
-
-console.log(person1 === person2);
