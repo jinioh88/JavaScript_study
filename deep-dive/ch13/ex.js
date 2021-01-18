@@ -1,13 +1,12 @@
+var y = 1;
 function foo() {
-    console.log('global');
+    var y= 10;
+    bar();
 }
 
 function bar() {
-    function foo() {
-        console.log('local')
-    }
-
-    foo();
+    console.log(y);
 }
 
-bar();
+foo();  // 1
+bar();  // 1
