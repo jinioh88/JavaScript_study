@@ -12,3 +12,7 @@ console.log(x);  // global
 var MYAPP = {};
 MYAPP.name = 'Oh';
 console.log(MYAPP.name);
+MYAPP.person = {
+    name: 'OH',
+    age: 32
+}
