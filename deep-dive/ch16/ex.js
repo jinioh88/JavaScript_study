@@ -31,3 +31,7 @@ Object.defineProperty(person, 'firstName', {
 Object.defineProperty(person, 'lastName', {
     value: 'OH'
 });
+
+function foo2() {
+    xx = 10;
+}
