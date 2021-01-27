@@ -22,4 +22,16 @@ function getLowersPrice(item) {
     return 0;
 }
 
-console.log(getLowersPrice(item));
+function addClick(items) {
+    for(var i =0; i < items.length; i++) {
+        items[i].onClick = function() {
+            return i;
+        };
+    }
+    return items;
+}
+
+function generateLink(image, width) {
+    const widthInt = parseInt(width, 10);
+    return 'https://' + getProvince() + '.' + image + '?width=' + widthInt;
+}
