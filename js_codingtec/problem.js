@@ -60,4 +60,10 @@ const defaultEmployee = {
 const employee = Object.assign({}, defaultEmployee, {
     name: Object.assign({}, defaultEmployee.name),
 });
+const employee2 = {
+    ...defaults, 
+    name: {
+        
+    }
+};
 console.log(employee);
