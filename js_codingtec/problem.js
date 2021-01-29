@@ -57,5 +57,7 @@ const defaultEmployee = {
     },
     years: 0,
 };
-const employee = Object.assign({}, defaultEmployee);
+const employee = Object.assign({}, defaultEmployee, {
+    name: Object.assign({}, defaultEmployee.name),
+});
 console.log(employee);
