@@ -35,3 +35,27 @@ function generateLink(image, width) {
     const widthInt = parseInt(width, 10);
     return 'https://' + getProvince() + '.' + image + '?width=' + widthInt;
 }
+
+const defaults = {
+    author: '',
+    title: '',
+    year: 2021,
+    rating: null,
+};
+
+const book = {
+    author: 'Joe Morgan',
+    title: 'Simplifying JavaScript',
+};
+
+const updated = Object.assign({}, defaults, book);
+
+const defaultEmployee = {
+    name: {
+        first: '',
+        last: '',
+    },
+    years: 0,
+};
+const employee = Object.assign({}, defaultEmployee);
+console.log(employee);
