@@ -66,4 +66,36 @@ const employee2 = {
         
     }
 };
-console.log(employee);
+
+const dogs = [
+    {
+        name: '맥스',
+        size: '소형견',
+        type: '보스턴테리어',
+        color: '검정색',
+    },
+    {
+        name: '도니',
+        size: '대형견',
+        type: '레브라도레트리버',
+        color: '검정색',
+    },
+    {
+        name: '섀도',
+        size: '중형견',
+        type: '래브라도레트리버',
+        color: '갈색',
+    },
+];
+
+let filters = {};
+function addFilters(filters, key, value) {
+    filters[key] = value;
+}
+function deleteFilters(filters, key) {
+    delete filters[key];
+}
+function clearFilters(filters) {
+    filters = {};
+    return filters;
+}
