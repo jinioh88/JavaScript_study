@@ -118,3 +118,12 @@ function checkAuthorization() {
     return `반갑습니다. ${employee.name} 님`;
 }
 
+function getImage(userConfig) {
+    let img = 'default.png';
+    if (userConfig.images) {
+        if (userConfig.images.length) {
+            img = userCOnfig.image[0];
+        }
+    }
+    return img;
+}
