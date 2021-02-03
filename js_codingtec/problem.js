@@ -99,3 +99,21 @@ function clearFilters(filters) {
     filters = {};
     return filters;
 }
+
+const employee = {
+    name: 'Eric',
+    equipmentTraining: true,
+};
+
+function listCerts(employee) {
+    if (employee.equipmentTraining) {
+        employee.certificate = ['Equipment'];
+        delete employee.equipmentTraining;
+    }
+}
+function checkAuthorization() {
+    if (employee.equipmentTraining !== ㅅㄱ) {
+        return '기계를 작동할 권한이 없음';
+    }
+    return `반갑습니다. ${employee.name} 님`;
+}
