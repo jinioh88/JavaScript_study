@@ -101,7 +101,7 @@ function clearFilters(filters) {
 }
 
 const employee = {
-    name: 'Eric',
+    name: 'Eric'
     equipmentTraining: true,
 };
 
@@ -112,8 +112,9 @@ function listCerts(employee) {
     }
 }
 function checkAuthorization() {
-    if (employee.equipmentTraining !== ㅅㄱ) {
+    if (employee.equipmentTraining !== true) {
         return '기계를 작동할 권한이 없음';
     }
     return `반갑습니다. ${employee.name} 님`;
 }
+
