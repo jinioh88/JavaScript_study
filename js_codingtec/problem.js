@@ -127,3 +127,9 @@ function getImage(userConfig) {
     }
     return img;
 }
+
+const prices = ['1.0', '2.5'];
+const formattedPrices = [];
+for (let i = 0; i < prices.length; i++) {
+    formattedPrices.push(parseFloat(prices[i]));
+}
