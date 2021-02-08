@@ -5,4 +5,13 @@ const landscape = {
 const { location: [latitude, longitude] }  = landscape;
 console.log(latitude);
 
-려ㅜㅊㅅ
+function displayPhoto({
+    title, 
+    photographer = 'Anonymous',
+    location: [latitude, longitude],
+    src: url, 
+    ...order}) {
+    const additional = Object.keys(other).map(key => `${key}: ${other[key]}`);
+    return (`
+    ...`);
+}
