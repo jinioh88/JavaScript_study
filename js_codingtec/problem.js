@@ -141,3 +141,21 @@ function convertWeight(weight, ounces, roundTo) {
     const round = roundTo === undefined ? 2 : roundTo;
     return roundToDecimalPlace(conversion, round);
 }
+
+import {getTaxInformation} from './taxService';
+
+functino formatPrices(user, {price, location}) {
+    const rate = getTaxInformation(localtion);
+    const taxes = rate ? `추가세금 $${price * rate}` : `추가 세금`;
+
+    return `${user}님의 합계 금액 : $${taxes}`;
+}
+
+const name = {
+    first: 'Lemmy',
+    last: 'Kilmister',
+};
+
+function getName({first, last}) {
+    return `${first} ${last}`;
+}
