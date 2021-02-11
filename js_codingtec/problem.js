@@ -57,9 +57,9 @@ const defaultEmployee = {
     },
     years: 0,
 };
-const employee = Object.assign({}, defaultEmployee, {
-    name: Object.assign({}, defaultEmployee.name),
-});
+// const employee = Object.assign({}, defaultEmployee, {
+//     name: Object.assign({}, defaultEmployee.name),
+// });
 const employee2 = {
     ...defaults, 
     name: {
@@ -101,7 +101,7 @@ function clearFilters(filters) {
 }
 
 const employee = {
-    name: 'Eric'
+    name: 'Eric',
     equipmentTraining: true,
 };
 
@@ -142,9 +142,9 @@ function convertWeight(weight, ounces, roundTo) {
     return roundToDecimalPlace(conversion, round);
 }
 
-import {getTaxInformation} from './taxService';
+// import {getTaxInformation} from './taxService';
 
-functino formatPrices(user, {price, location}) {
+function formatPrices(user, {price, location}) {
     const rate = getTaxInformation(localtion);
     const taxes = rate ? `추가세금 $${price * rate}` : `추가 세금`;
 
@@ -159,3 +159,26 @@ const name = {
 function getName({first, last}) {
     return `${first} ${last}`;
 }
+
+class Coupon {
+    constructor(price, expiration) {
+        this.price = price;
+        this.expiration = expiration || '2주';
+    }
+    getPriceText() {
+        return `${this.price}`;
+    }
+    getExpirationMessage() {
+        return ` 이 쿠폰은 ${this.expiration} 후에 만료됩니다.`;
+    }
+    isRewardsEligible(user) {
+        return user.isRewardsEligible && user.active;
+    }
+    getRewards(user) {
+        if (this.isRewardsEligible(user)) {
+            this.price = this.price * 0.9;
+        }
+    }
+}
+const coupon = new Coupon(5);
+console.log(coupon.getPriceText());
