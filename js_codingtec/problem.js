@@ -162,23 +162,19 @@ function getName({first, last}) {
 
 class Coupon {
     constructor(price, expiration) {
-        this.price = price;
+        this._price = price;
         this.expiration = expiration || '2주';
     }
-    getPriceText() {
-        return `${this.price}`;
+    get priceText() {
+        return `$${this._price}`;
     }
-    getExpirationMessage() {
-        return ` 이 쿠폰은 ${this.expiration} 후에 만료됩니다.`;
+    get price() {
+        return this._price;
     }
-    isRewardsEligible(user) {
-        return user.isRewardsEligible && user.active;
-    }
-    getRewards(user) {
-        if (this.isRewardsEligible(user)) {
-            this.price = this.price * 0.9;
-        }
+    set price(price) {
+        const newPrice = price.toString().replace(/[^\d]/g, '');
+        this._price = parseInt(newPrice, 10);
     }
 }
 const coupon = new Coupon(5);
-console.log(coupon.getPriceText());
+coupon.priceText;
