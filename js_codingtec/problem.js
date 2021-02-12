@@ -178,3 +178,13 @@ class Coupon {
 }
 const coupon = new Coupon(5);
 coupon.priceText;
+
+class Validator {
+    constructor() {
+        this.message = '가 유효하지 않습니다.';
+        this.setInvailidMessages = field => `${field}${this.message}`;
+    }
+    setInvailidMessages(...fields) {
+        return fields.map(this.setInvailidMessage);
+    }
+}
