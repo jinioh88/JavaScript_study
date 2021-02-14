@@ -49,3 +49,27 @@ function getMusic(theme) {
         album: 'kind of blue',
     });
 }
+
+async function getTheme() {
+    const {theme} = await getUserPreferences();
+    return theme;
+}
+
+getTheme().then(theme => {
+    console.log(theme);
+});
+
+async function getArtistByPreference() {
+    const {theme} = await getUserPreferences();
+    const {album} = await failMusic(theme);
+    const {artist} = await getArtistByPreference(album);
+    return artist;
+}
+
+getArtistByPreference()
+    .then(artist => {
+        console.log(artist);
+    })
+    .catch(e => {
+        console.error(e);
+    });
